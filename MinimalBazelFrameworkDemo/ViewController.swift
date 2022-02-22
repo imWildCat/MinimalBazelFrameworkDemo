@@ -17,6 +17,8 @@ class ViewController: UIViewController {
     view.backgroundColor = .systemBackground
 
     print("view did load")
+
+    DemoManager().doSomething()
   }
 
 
