@@ -13,6 +13,7 @@ swift_library(
     ],
     visibility = ["//visibility:public"],
     deps = [
+        "//DemoSwiftFramework:DemoSwiftFrameworkSource",
     ],
 )
 
@@ -96,6 +97,7 @@ ios_application(
         "ipad",
     ],
     frameworks = [
+        "//DemoSwiftFramework",
     ],
     infoplists = [":MinimalBazelFrameworkDemoAppPlist"],
     launch_storyboard = "Base.lproj/LaunchScreen.storyboard",

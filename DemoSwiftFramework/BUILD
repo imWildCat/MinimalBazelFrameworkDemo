@@ -6,10 +6,12 @@ load(
 load("//build-system/ios-utils:plist_fragment.bzl", "plist_fragment")
 
 swift_library(
-    name = "DemoSwiftFrameworkLib",
+    name = "DemoSwiftFrameworkSource",
     srcs = glob([
         "*.swift",
     ]),
+    module_name = "DemoSwiftFramework",
+    visibility = ["//visibility:public"],
     deps = [],
 )
 
@@ -45,6 +47,7 @@ ios_framework(
         "ipad",
     ],
     infoplists = [":DemoSwiftFrameworkPlist"],
-    minimum_os_version = "15.0",
-    deps = [":DemoSwiftFrameworkLib"],
+    minimum_os_version = "14.0",
+    visibility = ["//visibility:public"],
+    deps = [":DemoSwiftFrameworkSource"],
 )

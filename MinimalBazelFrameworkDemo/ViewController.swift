@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import DemoSwiftFramework
 
 class ViewController: UIViewController {
 
