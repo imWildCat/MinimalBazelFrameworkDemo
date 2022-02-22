@@ -1,0 +1,10 @@
+# From: https://github.com/abrampers/lagu-sion-ios/
+build --verbose_failures
+build --apple_platform_type=ios
+
+build:device_debug --ios_multi_cpus=arm64,x86_64
+build:device_debug --compilation_mode=fastbuild
+build:device_adhoc --ios_multi_cpus=arm64,x86_64
+build:device_adhoc --compilation_mode=opt
+
+test --verbose_failures
