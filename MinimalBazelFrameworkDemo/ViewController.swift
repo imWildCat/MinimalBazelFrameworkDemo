@@ -19,6 +19,14 @@ class ViewController: UIViewController {
     print("view did load")
 
     DemoManager().doSomething()
+
+    DemoManager().demoExtensionMethod()
+    // BUG Here:
+    // Use --sandbox_debug to see verbose messages from the sandbox
+    // Undefined symbols for architecture x86_64:
+    // "DemoSwiftFramework.DemoManager.demoExtensionMethod() -> ()", referenced from:
+    //   MinimalBazelFrameworkDemo_MinimalBazelFrameworkDemoAppLib.ViewController.viewDidLoad() -> () in libMinimalBazelFrameworkDemoAppLib.a(ViewController.swift.o)
+    // ld: symbol(s) not found for architecture x86_64
   }
 
 
