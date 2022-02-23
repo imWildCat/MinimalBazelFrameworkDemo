@@ -13,6 +13,7 @@ swift_library(
     module_name = "DemoSwiftFramework",
     visibility = ["//visibility:public"],
     deps = [],
+    alwayslink = True,
 )
 
 plist_fragment(
