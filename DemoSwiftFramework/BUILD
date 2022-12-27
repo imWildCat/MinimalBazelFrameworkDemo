@@ -46,7 +46,7 @@ ios_framework(
         "iphone",
         "ipad",
     ],
-    infoplists = [":DemoSwiftFrameworkPlist"],
+    infoplists = [":Info.plist"],
     minimum_os_version = "14.0",
     visibility = ["//visibility:public"],
     deps = [":DemoSwiftFrameworkSource"],
